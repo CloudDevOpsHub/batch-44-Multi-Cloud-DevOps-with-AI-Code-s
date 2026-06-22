@@ -1,0 +1,32 @@
+   1  pwd
+    2  cd /
+    3  pwd
+    4  ls
+    5  df -h
+    6  cd /var/log/
+    7  ls
+    8  cat auth.log 
+    9  more auth.log 
+   10  tail -20 auth.log 
+   12  tail -20f auth.log 
+   14  head -20 auth.log 
+   15  history
+   16  cat auth.log | grep error
+   17  cat auth.log | grep achal
+   18  cat auth.log | grep fail
+   19  cat auth.log | grep failed
+   20  cd ..
+   21  cd tmp/
+   22  mkdir rakesh
+   23  ls
+   24  cd rakesh/
+   25  ls
+   26  touch file
+   27  ls
+   28  cat file 
+   29  vi file 
+   30  cat file 
+   31  hostname
+   32  hostname -i
+   33  curl ifconfig.me
+   34  history
