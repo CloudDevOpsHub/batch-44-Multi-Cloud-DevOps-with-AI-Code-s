@@ -1,0 +1,47 @@
+root@day-3:~# history
+    1  unmae -a
+    2  uname -a
+    3  top 
+    4  uptime
+    5  free
+    6  free -m
+    7  free -g
+    8  free -h
+    9  df -m
+   10  df -g
+   11  df -h
+   12  ping www.google.com
+   13  ping 34.172.130.52
+   14  mkdir myfiles ; touch myfiles/{a.txt,b.txt,c.txt}
+   15  ls
+   16  ls myfiles/
+   17  tar -cvf allfiles.tar myfiles
+   18  ls
+   19  tar -xvf allfiles.tar
+   20  ls
+   21  rm -rf myfiles
+   22  \ls
+   23  ls
+   24  tar -xvf allfiles.tar
+   25  ls
+   26  su aditya
+   27  adduser aditya
+   28  su aditya
+   29  passwd aditya
+   30  userdel aditya
+   31  su aditya
+   32  addgroup dev
+   33  getent groups
+   34  getent group
+   35  adduser shalini
+   36  usermod -a -G dev shalini
+   37  getent group 
+   38  chage
+   39  chage aditya
+   40  chage shalini
+   41  cat /etc/passwd 
+   42  cat 5:1005:shalini saini,1,1,1,1:/home/shalini:/bin
+   43  cat /etc/shadow
+   44  cat /etc/group
+   45  vi /etc/sudoers
+   46  history
