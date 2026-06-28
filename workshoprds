@@ -1,0 +1,24 @@
+ 7 to 11   the 21 
+
+
+Step 1 Create EC2 instance with ubuntu OS and connect to it
+
+Step 2 Install mysql client in EC2 instance 
+
+sudo apt update
+sudo apt upgrade
+sudo apt install mysql-client
+mysql --version
+
+or 
+
+https://phoenixnap.com/kb/install-mysql-ubuntu-20-04 
+
+mysql (locally) that’s why we r getting this error 
+
+Step 3 Connect with endpoint 
+
+mysql -h <endpoint> -u admin -p 
+
+
+You may get the error …
