@@ -24,3 +24,46 @@ jenkins --version
 systemctl status jenkins
 systemctl stop jenkins
 systemctl start jenkins
+
+
+---------Pipeline 
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                'Command'
+            }
+        }
+    }
+}
+
+
+
+pipeline {
+agent any
+
+    stages {
+        stage('Git clone') {
+            steps {
+            git branch: 'main', url: 'https://github.com/DevSecOpsG/helloworldsimplejavaprogram'
+            }
+        }
+        stage('Build'){
+            steps{
+            sh 'javac helloworld.java'
+            }
+        }
+        stage('Run'){
+            steps{
+            sh 'java Simple'
+            }
+        }
+    }
+}
+
+
+
