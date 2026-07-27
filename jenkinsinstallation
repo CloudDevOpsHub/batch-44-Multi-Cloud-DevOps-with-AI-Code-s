@@ -65,5 +65,48 @@ agent any
     }
 }
 
+--------------
 
+
+pipeline {
+    agent any
+
+    tools {
+        maven 'Maven'   // make sure Maven is configured in Jenkins
+        jdk 'Java'      // JDK also configured
+    }
+
+    stages {
+
+        stage('Clone Code') {
+            steps {
+                git 'https://github.com/CloudDevOpsHub/javaspringboot-ecommerce'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'gradle'
+            }
+        }
+
+        stage('selinum Test') {
+            steps {
+                sh '/path/local.sh'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh '''
+                echo "Stopping old app if running"
+                pkill -f jenkins.war || true
+
+                echo "Starting application on port 3000"
+                nohup java -jar jenkins.war --httpPort=3000 > app.log 2>&1 &
+                '''
+            }
+        }
+    }
+}
 
