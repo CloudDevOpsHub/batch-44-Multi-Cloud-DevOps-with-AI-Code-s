@@ -47,3 +47,29 @@ MAINTAINER clouddevopshub@gmail.com
 RUN apt-get update
 RUN apt-get install nginx -y
 CMD [“echo”,”Image created”]
+
+
+my history 
+
+ 1  curl -fsSL https://get.docker.com -o install-docker.sh
+    2  sudo sh install-docker.sh
+    3  docker -v
+    4  ls
+    5  vi Dockerfile
+    6  cat Dockerfile 
+    7  ls
+    8  dicker images
+    9  docker images
+   10  docker build -t swarnandu44 .
+   11  docker images
+   12  docker tag 59aafac36b78 vikas4cloud/swarnandu44:latest
+   13  docker images
+   14  docker login
+   15  docker images
+   16  docker push vikas4cloud/swarnandu44:latest
+   17  docker pull shalinisaini24/shaliniimage
+   18  docker images
+   19  docker pull devopsprajyot/prajyotaplpine:tagname
+   20  docker pull devopsprajyot/prajyotaplpine
+   21  docker images
+   22  history
