@@ -24,3 +24,26 @@ sudo -i
 curl -fsSL https://get.docker.com -o install-docker.sh
 sudo sh install-docker.sh
 docker -v
+
+
+
+manual 
+
+apt-get update
+apt-get install nginx -y
+
+Mohit Sharma 8:22
+
+
+
+Run is from OS level 
+CMD is from Application level CLI output 
+
+
+Dockerfile
+
+FROM ubuntu
+MAINTAINER clouddevopshub@gmail.com
+RUN apt-get update
+RUN apt-get install nginx -y
+CMD [“echo”,”Image created”]
