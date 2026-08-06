@@ -73,3 +73,29 @@ my history
    20  docker pull devopsprajyot/prajyotaplpine
    21  docker images
    22  history
+
+
+git clone https://github.com/CloudDevOpsHub/Dockerfile-Advance-Demo.git
+   44  ls
+   45  cd Dockerfile-Advance-Demo/
+   46  ls
+   47  docker build -f Dockerfile.bloated -t app:bloated .
+   48  docker build -f Dockerfile.optimized -t app:optimized .
+   49  docker images
+   50  docker purge
+   51  history
+
+
+
+
+  Id CommandLine
+  -- -----------
+   1 docker images
+   2 docker ps
+   3 docker images
+   4 docker images
+   5 docker ps
+   6 docker inspect 2bf27e8d691f
+   7 docker logs 2bf27e8d691f
+   8 docker stats
+   9 time docker run hello-world
