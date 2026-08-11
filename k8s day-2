@@ -1,0 +1,33 @@
+491  gcloud container clusters get-credentials pooja --region europe-central2 --project march22paid
+  492  kubectl get nodes
+  493  kubectl get po
+  494   kubectl run nginx  --image=nginx:1.16
+  495  kubectl get po
+  496  kubectl get po -o wide
+  497  kubectl logs nginx
+  498  kubectl logs po nginx
+  499  kubectl logs nginx
+  500  kubect describe nginx
+  501  kubectl describe nginx
+  502  kubectl describe po nginx
+  503   kubectl run nginx  --image=nginx:9.545
+  504   kubectl run nginx9  --image=nginx:9.545
+  505  kubectl get po
+  506  kubectl describe po nginx9
+  507  kubectl get svc
+  508  kubectl get po
+  509  kubectl get svc
+  510  clear
+  511  kubectl get svc
+  512  kubectl get svc -w
+  513  kubectl run jenkins  --image=jenkins/jenkins:lts
+  514  kubectl get svc
+
+  528  kubectl exec -it jenkins  -- bin/bash  
+  529  kubectl cluster-info
+
+  533  kubectl config get-contexts
+  534  kubectl get no
+
+  536  kubectl describe no gke-pooja-default-pool-3f60101b-q3vm
+  537  history
