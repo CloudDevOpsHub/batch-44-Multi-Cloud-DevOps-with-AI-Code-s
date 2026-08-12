@@ -31,3 +31,11 @@
 
   536  kubectl describe no gke-pooja-default-pool-3f60101b-q3vm
   537  history
+
+
+
+--- 
+apiVersion: v1
+kind: Namespace
+metadata: 
+  name: qa
