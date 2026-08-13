@@ -66,3 +66,32 @@ Step 5: Push the Image
 Now your image is available in Artifact Registry 🎉
 
 
+
+--------------------
+
+
+
+1. Bridge Networks: The Local Street
+
+By default, when you run a container, Docker attaches it to a bridge network if you don’t specify otherwise.
+How It Works
+Bridge networks are private to the host machine.
+Containers on the same bridge network can communicate using container names as DNS.
+External access is possible by publishing ports from the container to the host.
+
+Think of a bridge network as the local street in your neighborhood. Cars (containers) can move around freely within the neighborhood (host), but if they want to go outside (to the internet), they must pass through a gateway.
+
+Example
+# Create a custom bridge network
+                                                                       docker network create --driver bridge my_bridge
+
+# Run two containers in the same bridge network
+                                                                      docker run -dit --name app1 --network my_bridge alpine sh
+                                                                      docker run -dit --name app2 --network my_bridge alpine sh
+
+# From inside app1, you can ping app2 by name
+                                                                       docker exec -it app1 ping app2
+
+Here, Docker’s built-in DNS resolves app2 to its container IP within the bridge network.
+This makes service-to-service communication seamless.
+
