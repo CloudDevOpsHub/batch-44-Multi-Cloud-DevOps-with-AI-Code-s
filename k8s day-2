@@ -39,3 +39,30 @@ apiVersion: v1
 kind: Namespace
 metadata: 
   name: qa
+
+
+---------------------------------
+
+Step 1: Login to GCP
+                                  gcloud auth login
+                                  gcloud config set project march22paid
+
+Step 2: Authenticate Docker with GCP
+This is important (many people miss this 👇)
+                                gcloud auth configure-docker africa-south1-docker.pkg.dev
+
+Step 3: Build Your Docker Image
+                                 docker build -t my-app .
+
+Step 4: Tag the Image (VERY IMPORTANT)
+You need to tag in this format:
+REGION-docker.pkg.dev/PROJECT-ID/REPO/IMAGE:TAG
+Your case:
+                                docker tag my-app africa-south1-docker.pkg.dev/march22paid/test/my-app:v1
+
+Step 5: Push the Image
+                                docker push africa-south1-docker.pkg.dev/march22paid/test/my-app:v1
+✅ Done!
+Now your image is available in Artifact Registry 🎉
+
+
