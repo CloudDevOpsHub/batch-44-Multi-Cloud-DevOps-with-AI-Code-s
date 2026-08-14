@@ -1,0 +1,15 @@
+Step 1 :- Create the GKE Cluster and Connect
+
+Step 2 :- clone the code https://github.com/DevSecOpsG/cd-k8 
+Originally at  
+git clone https://github.com/GoogleCloudPlatform/microservices-demo.git 
+cd microservices-demo
+done–
+Step 3 :- Deploy the Application on GKE
+
+kubectl apply -f ./release/kubernetes-manifests.yaml
+
+Step 4 :- kubectl get pods -w 
+
+Step 5 :- Find out the external IP from the Command
+kubectl get service frontend-external | awk '{print $4}'
