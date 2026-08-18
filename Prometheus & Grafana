@@ -76,7 +76,21 @@ Access Grafana local instance:
 Visit https://github.com/prometheus-operator/kube-prometheus for instructions on how to create & configure Alertmanager and Prometheus instances using the Operator.
 
 
+my History
 
+  483  kubectl --namespace monitor get secrets kube-prometheus-stack-grafana -o jsonpath="{.data.admin-password}" | base64 -d ; echo
+  484  gcloud container clusters get-credentials cluster-1 --region us-central1 --project march22paid
+  485  gcloud container clusters get-credentials grafanaday2 --region us-central1 --project march22paid
+  486  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+  487  helm repo update
+  488  helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack --namespace monitor
+  489  kubectl get svc
+  490  kubectl get svc -n monitor
+  491  kubectl expose deployment kube-prometheus-stack-grafana --port=3000 --target-port=3000 --name=grafana --type=LoadBalancer -n monitor
+  492  kubectl get svc -n monitor
+  493  kubectl --namespace monitor get secrets kube-prometheus-stack-grafana -o jsonpath="{.data.admin-password}" | base64 -d ; echo
+  494  kubectl get svc -n monitor
+  495  history
 
 
 
