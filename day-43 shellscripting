@@ -82,3 +82,21 @@ echo "Enter Your email"
 read name
 echo "Welcome $name to Linux Learning session"
 
+
+--------------
+
+
+
+#!/bin/bash
+# Set the limit
+LIMIT=80
+# Check disk usage of root directory
+USAGE=$(df / | tail -1 | awk '{print $5}' | tr -d '%')
+echo "Current disk usage is $USAGE%"
+if [ $USAGE -ge $LIMIT ]
+then
+    echo "Warning! Disk space is more than 80%"
+else
+    echo "Disk space is OK"
+fi
+
