@@ -38,3 +38,34 @@ echo "$SOMEVAR"
 
 Expected Output 
 
+-------------------
+
+
+cat > system_health.sh <<'EOF'
+#!/bin/bash
+
+echo "======================================"
+echo "       Linux System Health Check"
+echo "======================================"
+
+echo
+echo "Hostname: $(hostname)"
+echo "IP Address: $(hostname -I | awk '{print $1}')"
+
+echo
+echo "Memory Usage:"
+free -h
+
+echo
+echo "Disk Usage:"
+df -h
+
+echo
+echo "CPU & Processes:"
+uptime
+ps aux --sort=-%cpu | head -n 6
+
+echo
+echo "System Health Check Completed!"
+EOF
+
