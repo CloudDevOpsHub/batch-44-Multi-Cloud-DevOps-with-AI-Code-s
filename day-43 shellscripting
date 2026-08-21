@@ -69,3 +69,16 @@ echo
 echo "System Health Check Completed!"
 EOF
 
+----------
+
+read 
+
+
+Example 5 Get User Input from the command line 
+
+
+#!/bin/bash
+echo "Enter Your email"
+read name
+echo "Welcome $name to Linux Learning session"
+
