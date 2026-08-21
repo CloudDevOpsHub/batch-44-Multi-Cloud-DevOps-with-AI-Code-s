@@ -1,0 +1,17 @@
+
+
+
+Example 1
+
+#!/bin/bash  
+echo "This is a shell script"  
+ls
+echo "I am done running ls"  
+SOMEVAR='text stuff'  
+echo "$SOMEVAR"
+
+Example 2
+#!/bin/bash 
+echo "Hello there"
+echo "My name is $(whoami)"
+echo "Nice to meet you"
