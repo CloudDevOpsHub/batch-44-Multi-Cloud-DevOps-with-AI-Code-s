@@ -7,7 +7,7 @@ Step 1 Go to docker playground create an  instance / node and create 3 Ubuntu  c
 
 Step 2 create containers    
 
-apt-get update && apt install docker.io -y
+sudo apt-get update && sudo apt install docker.io -y
 
 docker run -itd --name ansible_master ubuntu /bin/bash
 docker run -itd --name target1 ubuntu /bin/bash
