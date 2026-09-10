@@ -83,5 +83,5 @@ eksctl create cluster \
 --managed 
  
 
-
+eksctl delete cluster --name mlops-cluster --region ap-south-1
 
