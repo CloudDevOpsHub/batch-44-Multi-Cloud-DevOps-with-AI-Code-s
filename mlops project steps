@@ -4,3 +4,23 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install python3 python3-pip python3-venv git -y
 python3 --version
 pip3 –version
+
+
+git clone https://github.com/Ayushmansen500/first-mlops-project.git
+
+https://github.com/CloudDevOpsHub/MLOPS-Project
+cd first-mlops-project
+
+
+python3 -m venv .mlops
+source .mlops/bin/activate
+
+
+pip install --upgrade pip
+pip install -r requirements.txt
+
+python train.py
+
+uvicorn main:app --host 0.0.0.0 --port 8000
+
+http://:8000/docs
