@@ -81,6 +81,11 @@ eksctl create cluster \
 --nodes-min 2 \
 --nodes-max 3 \
 --managed 
+
+kubectl apply -f k8s.deploy.yaml 
+kubectl get deploy
+kubectel get svc
+kubectl get po
  
 
 eksctl delete cluster --name mlops-cluster --region ap-south-1
